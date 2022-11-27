@@ -15,7 +15,7 @@ const uri='mongodb+srv://rajatsingh:rajatsingh@cluster0.0edz7av.mongodb.net/Todo
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
-  // useUnifiedTopology: true, 
+  useUnifiedTopology: true, 
 });
 const itemsSchema = {
   name: String
