@@ -11,11 +11,13 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+// mongoose.set('useFindAndModify', false);
 const uri='mongodb+srv://rajatsingh:rajatsingh@cluster0.0edz7av.mongodb.net/Todolist?retryWrites=true&w=majority';
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true, 
+  useFindAndModify: false,
 });
 const itemsSchema = {
   name: String
